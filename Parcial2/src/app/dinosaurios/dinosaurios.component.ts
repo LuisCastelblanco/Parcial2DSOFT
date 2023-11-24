@@ -16,11 +16,18 @@ export class DinosauriosComponent implements OnInit {
 
   constructor(private dinosauriosService: DinosauriosService) { }
 
+  getDinosaurios(){
+    this.dinosauriosService.getDinosuarios().subscribe(dinosaurios => {
+      this.dinosaurios = dinosaurios;
+
+    });
+  }
   onSelected(dinosaurio: Dinosaurios): void {
     this.selected = true;
     this.selectedDinosaurio = dinosaurio;
   }
   ngOnInit() {
+    this.getDinosaurios();
   }
 
 }
