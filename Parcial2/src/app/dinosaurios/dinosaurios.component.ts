@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Dinosaurios } from './dinosaurios';
-import { DinosauriosService } from './dinosuarios.service';
+import { DinosauriosService } from './dinosaurios.service';
 
 @Component({
   selector: 'app-dinosaurios',
