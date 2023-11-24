@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div>
+    <br />
+
+    <div class="selected-dinosaurio rounded" *ngIf="selected">
+      <app-dinosaurios-detail [dinosauriosDetail]="selectedDinosaurio"></app-dinosaurios-detail>
+    </div>
+    <br />
+    <div
+    *ngFor="
+      let dinosaurio of dinosaurios "  >
+
+        <div class="card p-2" style="width: 15rem; height: 33rem">
+          <img
+            class="card-img-top"
+            src="{{  dinosaurio.image}}"
+            alt="{{ dinosaurio.name }}"
+           (click)="onSelected(dinosaurio)"
+
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ dinosaurio.name }}</h5>
+            <p class="card-title">{{ dinosaurio.scientificName }}</p>
+            <p class="card-text">[{{ dinosaurio.description }}]</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <br />
+      <br />
+    </div>
+    <br />
+    <br />
+  </div>
+
