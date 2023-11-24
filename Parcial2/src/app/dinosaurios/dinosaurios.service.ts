@@ -9,7 +9,7 @@ import { Dinosaurios } from './dinosaurios';
   providedIn: 'root'
 })
 export class DinosauriosService {
-  private apiUrl = environment.baseUrl + "dinosaurios.json"
+  private apiUrl = environment.baseUrl
 constructor(private http: HttpClient) { }
 
 getDinosuarios(): Observable<Dinosaurios[]>{
